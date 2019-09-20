@@ -4,11 +4,12 @@
 #
 Name     : mvn-h3xsteram-retirejs
 Version  : 3.0.1
-Release  : 1
+Release  : 2
 URL      : https://github.com/RetireJS/retire.js/tarball/master
 Source0  : https://github.com/RetireJS/retire.js/tarball/master
 Source1  : https://repo1.maven.org/maven2/com/h3xstream/retirejs/retirejs-core/3.0.1/retirejs-core-3.0.1.jar
 Source2  : https://repo1.maven.org/maven2/com/h3xstream/retirejs/retirejs-core/3.0.1/retirejs-core-3.0.1.pom
+Source3  : https://repo1.maven.org/maven2/com/h3xstream/retirejs/retirejs-root-pom/3.0.1/retirejs-root-pom-3.0.1.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
@@ -50,6 +51,9 @@ cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/com/h3xstream/retirejs/
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/h3xstream/retirejs/retirejs-core/3.0.1
 cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/com/h3xstream/retirejs/retirejs-core/3.0.1/retirejs-core-3.0.1.pom
 
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/h3xstream/retirejs/retirejs-root-pom/3.0.1
+cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/com/h3xstream/retirejs/retirejs-root-pom/3.0.1/retirejs-root-pom-3.0.1.pom
+
 
 %files
 %defattr(-,root,root,-)
@@ -58,6 +62,7 @@ cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/com/h3xstream/retirejs/
 %defattr(-,root,root,-)
 /usr/share/java/.m2/repository/com/h3xstream/retirejs/retirejs-core/3.0.1/retirejs-core-3.0.1.jar
 /usr/share/java/.m2/repository/com/h3xstream/retirejs/retirejs-core/3.0.1/retirejs-core-3.0.1.pom
+/usr/share/java/.m2/repository/com/h3xstream/retirejs/retirejs-root-pom/3.0.1/retirejs-root-pom-3.0.1.pom
 
 %files license
 %defattr(0644,root,root,0755)
